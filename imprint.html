@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imprint — Kitchen Robotics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --orange: #ff7300;
+      --sp-x: clamp(20px, 5vw, 80px);
+    }
+    body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a1a; }
+
+    /* ── NAV ── */
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .topnav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px var(--sp-x);
+    }
+    .nav-logo { height: 32px; width: auto; display: block; }
+    .nav-circus {
+      font-size: clamp(9px,0.85vw,11px); font-weight: 600;
+      color: rgba(255,255,255,0.45); letter-spacing: 0.08em;
+      text-transform: uppercase; white-space: nowrap;
+      text-decoration: none; transition: color 0.2s ease;
+    }
+    .nav-circus:hover { color: rgba(255,255,255,0.9); }
+    @media (max-width: 640px) { .nav-circus { font-size: 9px; } }
+
+    /* ── PAGE ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 140px var(--sp-x) 100px;
+    }
+
+    .page-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .page-title {
+      font-size: clamp(28px, 4vw, 52px); font-weight: 700;
+      letter-spacing: -0.03em; line-height: 1.1;
+      color: #0a0a0a;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 18px; font-weight: 700; letter-spacing: -0.02em;
+      color: #0a0a0a; margin-bottom: 24px;
+    }
+
+    /* ── TABLE-STYLE ROWS ── */
+    .info-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 8px 24px;
+      margin-bottom: 12px;
+      align-items: baseline;
+    }
+    .info-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; color: #a0a0a0;
+    }
+    .info-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; color: #1a1a1a; font-weight: 500;
+    }
+    .info-address {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; line-height: 1.6; color: #1a1a1a;
+      font-weight: 500; margin-bottom: 20px;
+    }
+    .company-name {
+      font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+      color: #0a0a0a; margin-bottom: 8px;
+    }
+
+    .section p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; line-height: 1.75; color: #555;
+      margin-bottom: 8px;
+    }
+    .section a {
+      color: #0a0a0a; text-decoration: none;
+      border-bottom: 1px solid #e5e5e5;
+      transition: border-color 0.2s ease;
+    }
+    .section a:hover { border-color: var(--orange); color: var(--orange); }
+    .info-value a {
+      color: #1a1a1a; text-decoration: none;
+      border-bottom: 1px solid #e5e5e5;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+    .info-value a:hover { border-color: var(--orange); color: var(--orange); }
+
+    .divider { border: none; border-top: 1px solid #f0f0f0; margin: 48px 0; }
+
+    @media (max-width: 640px) {
+      .page-title { font-size: 28px; margin-bottom: 40px; padding-bottom: 28px; }
+      .info-row { grid-template-columns: 1fr; gap: 2px; margin-bottom: 16px; }
+      .info-label { font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; }
+      .footer-legal { flex-wrap: wrap; gap: 16px; }
+    }
+
+    /* ── FOOTER ── */
+    .footer-section {
+      background: #0a0a0a;
+      padding: clamp(40px,6vw,80px) var(--sp-x) clamp(24px,4vw,48px);
+    }
+    .footer-inner { max-width: 1400px; margin: 0 auto; }
+    .footer-logo { margin-bottom: clamp(32px,4vw,60px); }
+    .footer-bottom {
+      border-top: 1px solid rgba(173,179,180,0.1);
+      padding-top: clamp(22px,3.3vw,49px);
+      text-align: center;
+    }
+    .footer-copy {
+      font-family: 'Inter', sans-serif; font-size: 11px;
+      color: #fafafa; letter-spacing: 0.025em; text-transform: uppercase;
+    }
+    .footer-legal { display: flex; justify-content: center; gap: 32px; margin-top: 16px; }
+    .footer-legal-link {
+      font-family: 'Inter', sans-serif; font-size: 11px;
+      color: rgba(250,250,250,0.45); text-decoration: none;
+      letter-spacing: 0.025em; text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+    .footer-legal-link:hover { color: #fafafa; }
+    .footer-legal-link.active { color: #fafafa; }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="index.html">
+        <img src="image/K robot logo.png" alt="Kitchen Robotics" class="nav-logo">
+      </a>
+      <a href="https://www.circus-group.com/" target="_blank" rel="noopener noreferrer" class="nav-circus">A Circus Group Company</a>
+    </div>
+  </nav>
+
+  <main class="page-wrap">
+
+    <p class="page-eyebrow">Legal</p>
+    <h1 class="page-title">Information According to §5 TMG</h1>
+
+    <!-- Company -->
+    <div class="section">
+      <p class="company-name">Circus SE</p>
+      <p class="info-address">St.-Martin-Straße 112<br>81669 München</p>
+      <div class="info-row">
+        <span class="info-label">VAT-ID:</span>
+        <span class="info-value">DE 333437817</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Commercial Register Number:</span>
+        <span class="info-value">HRB 305540</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Commercial Register Court:</span>
+        <span class="info-value">District Court Munich</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Represented by -->
+    <div class="section">
+      <h2 class="section-title">Represented by</h2>
+      <div class="info-row">
+        <span class="info-label">Managing Director:</span>
+        <span class="info-value">Nikolas Bullwinkel</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Contact -->
+    <div class="section">
+      <h2 class="section-title">Contact</h2>
+      <div class="info-row">
+        <span class="info-label">General:</span>
+        <span class="info-value"><a href="mailto:contact@circus-group.com">contact@circus-group.com</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Press:</span>
+        <span class="info-value"><a href="mailto:press@circus-group.com">press@circus-group.com</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Sales:</span>
+        <span class="info-value"><a href="mailto:sales@circus-group.com">sales@circus-group.com</a></span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Consumer Dispute Resolution -->
+    <div class="section">
+      <h2 class="section-title">Consumer Dispute Resolution</h2>
+      <p>We are neither willing nor obligated to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+      <p>The European Commission has established a European Online Dispute Resolution (ODR) Platform. The ODR Platform can be accessed on the internet at the following address: <a href="http://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">http://ec.europa.eu/consumers/odr/</a></p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Liability Disclaimer -->
+    <div class="section">
+      <h2 class="section-title">Liability Disclaimer</h2>
+      <p>Despite careful content control, we do not assume any liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
+    </div>
+
+  </main>
+
+  <footer class="footer-section">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="image/K robot logo.png" alt="Kitchen Robotics" style="height:32px;width:auto;display:block;">
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2024 Kitchen Robotics. Engineered for the Culinary Architect.</span>
+        <div class="footer-legal">
+          <a href="imprint.html" class="footer-legal-link active">Imprint</a>
+          <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
